@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | LTP Intel Studio</title>
+    <style>
+        /* --- NỀN VÀ MÀU SẮC CHỦ ĐẠO (ĐỒNG NHẤT) --- */
+        body { margin: 0; padding: 0; background-color: #050a14; color: #ffffff; font-family: 'Inter', 'Segoe UI', sans-serif; overflow-x: hidden; line-height: 1.6; }
+        #particles-js { position: absolute; width: 100%; height: 100%; background-color: #050a14; z-index: -1; }
+
+        /* --- THANH CÔNG CỤ (KHÔNG THAY ĐỔI) --- */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 60px; background: rgba(10, 20, 40, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid #1a3a6a; position: fixed; width: calc(100% - 120px); top: 0; z-index: 100; }
+        .logo-container { display: flex; align-items: center; gap: 15px; text-decoration: none; color: white; }
+        .logo-img { height: 50px; border-radius: 5px; border: 1px solid #1a3a6a; }
+        .logo-text { font-size: 24px; font-weight: 800; color: #569cd6; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a { text-decoration: none; color: #a0b0d0; font-weight: 500; font-size: 15px; transition: 0.3s; position: relative; }
+        .nav-links a:hover { color: #ffffff; }
+        .nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: #38bdf8; transition: 0.3s; }
+        .nav-links a:hover::after { width: 100%; }
+
+        /* --- PHẦN NỘI DUNG (ABOUT CONTENT) --- */
+        .container { max-width: 1000px; margin: 150px auto 100px; padding: 0 40px; position: relative; z-index: 10; }
+        
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h1 { font-size: 48px; font-weight: 900; background: linear-gradient(135deg, #ffffff 30%, #38bdf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; }
+        
+        .about-text { background: rgba(14, 22, 42, 0.6); border: 1px solid #1a3a6a; padding: 40px; border-radius: 20px; margin-bottom: 50px; }
+        .about-text p { color: #a0b0d0; font-size: 18px; margin-bottom: 20px; text-align: justify; }
+
+        /* --- ĐỘI NGŨ QUẢN LÝ (MANAGEMENT TEAM) --- */
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px; }
+        .team-card { background: #0e162a; border: 1px solid #1a3a6a; padding: 30px; border-radius: 15px; text-align: center; transition: 0.3s; }
+        .team-card:hover { border-color: #38bdf8; transform: translateY(-5px); }
+        .team-card h3 { color: #ffffff; margin-bottom: 5px; font-size: 20px; }
+        .team-card span { color: #38bdf8; font-size: 14px; font-weight: 600; text-transform: uppercase; }
+
+        /* --- YOUTUBE BUTTON --- */
+        .yt-link { display: inline-flex; align-items: center; gap: 10px; background: #cd201f; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; transition: 0.3s; margin-top: 20px; }
+        .yt-link:hover { background: #ff0000; transform: scale(1.05); }
+
+        footer { text-align: center; padding: 40px; color: #555; font-size: 13px; border-top: 1px solid #1a3a6a; }
+    </style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<nav>
+    <a href="index.html" class="logo-container">
+        <img src="logo.png" alt="LTP Intel Studio Logo" class="logo-img">
+        <span class="logo-text">LTP Intel Studio</span>
+    </a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="support.html">Support</a>
+        <a href="about.html" style="color: #ffffff;">About</a>
+        <a href="download.html" style="color: #38bdf8; font-weight: bold; padding: 8px 15px; border-radius: 4px; border: 1px solid #1a3a6a;">Download</a>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="section-header">
+        <h1>About LTP Intel Studio</h1>
+        <p style="color: #569cd6; font-weight: 600;">A Scientific Software Laboratory based in the United States</p>
+    </div>
+
+    <div class="about-text">
+        <p>
+            LTP Intel Studio is dedicated to the research and development of advanced software solutions. We focus on bridging the gap between complex scientific data management and user-centric efficiency. Our mission is to provide robust infrastructures that empower professionals to maintain data persistence and security in an ever-evolving digital landscape.
+        </p>
+        <p>
+            Our development philosophy relies on the power of <strong>Python</strong> for high-performance scientific logic and backend stability, combined with <strong>HTML</strong> for intuitive, cross-platform interface design. By focusing on essential architectural integrity, we ensure that every solution released under the LTP Intel Studio umbrella meets the rigorous demands of professional workflows.
+        </p>
+        <center>
+            <a href="https://www.youtube.com/@ltpintelligent" target="_blank" class="yt-link">
+                <span>▶</span> Visit Our Official Youtube Channel
+            </a>
+        </center>
+    </div>
+
+    <div class="section-header">
+        <h2 style="font-size: 32px;">Executive Management</h2>
+    </div>
+
+    <div class="team-grid">
+        <div class="team-card">
+            <h3>Calvin Karl Harrison Jacob</h3>
+            <span>Chief Executive Officer</span>
+        </div>
+        <div class="team-card">
+            <h3>Edward Thomas Henry</h3>
+            <span>Vice President</span>
+        </div>
+        <div class="team-card">
+            <h3>Lucas David Adkinson</h3>
+            <span>Vice President</span>
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2024 LTP Intel Studio. Built for Professionals. All rights reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#38bdf8" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.2 },
+        "size": { "value": 3 },
+        "line_linked": { "enable": true, "distance": 150, "color": "#1a3a6a", "opacity": 0.3, "width": 1 },
+        "move": { "enable": true, "speed": 1.5 }
+      },
+      "retina_detect": true
+    });
+</script>
+
+</body>
+</html>

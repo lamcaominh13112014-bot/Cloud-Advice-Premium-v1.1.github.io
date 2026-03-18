@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features | Cloud Advice Premium v1.1 - LTP Intel Studio</title>
+    <style>
+        /* --- NỀN VÀ MÀU SẮC CHỦ ĐẠO (BLUE-BLACK - Y CHANG INDEX) --- */
+        body { margin: 0; padding: 0; background-color: #050a14; color: #ffffff; font-family: 'Inter', 'Segoe UI', sans-serif; overflow-x: hidden; scroll-behavior: smooth; }
+        
+        /* HIỆU ỨNG NỀN HẠT ÁNH SÁNG (PARTICLE EFFECT) */
+        #particles-js { position: absolute; width: 100%; height: 100%; background-color: #050a14; z-index: -1; }
+
+        /* --- THANH MENU ĐIỀU HƯỚNG (NAVBAR - Y CHANG INDEX) --- */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 60px; background: rgba(10, 20, 40, 0.8); backdrop-filter: blur(10px); border-bottom: 1px solid #1a3a6a; position: fixed; width: calc(100% - 120px); top: 0; z-index: 100; }
+        .logo-container { display: flex; align-items: center; gap: 15px; text-decoration: none; color: white; }
+        .logo-img { height: 50px; border-radius: 5px; border: 1px solid #1a3a6a; }
+        .logo-text { font-size: 24px; font-weight: 800; color: #569cd6; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a { text-decoration: none; color: #a0b0d0; font-weight: 500; font-size: 15px; transition: 0.3s; position: relative; }
+        .nav-links a:hover { color: #ffffff; }
+        .nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: #38bdf8; transition: 0.3s; }
+        .nav-links a:hover::after { width: 100%; }
+
+        /* --- PHẦN TIÊU ĐỀ FEATURES (FEATURES HERO) --- */
+        .features-hero { text-align: center; padding: 150px 20px 80px; position: relative; z-index: 10; margin-top: 80px; }
+        .features-hero h1 { font-size: 56px; font-weight: 900; background: linear-gradient(135deg, #ffffff 30%, #38bdf8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 15px; letter-spacing: -1px; }
+        .features-hero p { font-size: 19px; color: #a0b0d0; max-width: 650px; margin: 0 auto; line-height: 1.6; }
+
+        /* --- CÁC KHUNG CHỨC NĂNG (SỬA LẠI LAYOUT ĐỂ TRÁNH CHỒNG LẤN) --- */
+        .features-grid { display: flex; flex-direction: column; gap: 50px; padding: 0 60px 100px; position: relative; z-index: 10; max-width: 1200px; margin: 0 auto; }
+        
+        /* HIỆU ỨNG ANIMATION FADE-IN-UP KHI LOAD TRANG */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .feature-card { background: #0e162a; padding: 40px; border-radius: 16px; border: 1px solid #1a3a6a; display: flex; gap: 40px; align-items: flex-start; transition: 0.3s; opacity: 0; animation: fadeInUp 0.6s ease-out forwards; }
+        .feature-card:nth-child(1) { animation-delay: 0.1s; }
+        .feature-card:nth-child(2) { animation-delay: 0.2s; }
+        .feature-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .feature-card:hover { transform: translateY(-8px); border-color: #38bdf8; box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
+        
+        /* CỘT TRÁI (CHỮ LỚN - 100TB, OTP) */
+        .feature-icon-column { flex-shrink: 0; width: 150px; display: flex; justify-content: center; align-items: center; }
+        .large-text-icon { font-size: 48px; font-weight: 800; color: #38bdf8; text-transform: uppercase; letter-spacing: -2px; line-height: 1; }
+        .large-emoji-icon { font-size: 64px; color: #a0b0d0; }
+
+        /* CỘT PHẢI (NỘI DUNG) */
+        .feature-content h2 { font-size: 28px; font-weight: 700; color: #ffffff; margin-top: 0; margin-bottom: 15px; }
+        .feature-content p { font-size: 16px; color: #a0b0d0; line-height: 1.7; margin-bottom: 30px; }
+
+        /* --- DANH SÁCH TÍNH NĂNG CÓ DẤU TÍCH ✔ (CHECKMARK) --- */
+        .feature-details-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px 30px; }
+        .detail-item { display: flex; align-items: flex-start; gap: 15px; }
+        
+        /* DẤU TÍCH ✔ VÀ HIỆU ỨNG TỎA SÁNG */
+        .checkmark-icon { font-size: 20px; color: #4ec9b0; transition: 0.3s; flex-shrink: 0; margin-top: 2px; }
+        .detail-item:hover .checkmark-icon { color: #ffffff; text-shadow: 0 0 10px rgba(78, 201, 176, 0.8); }
+
+        .detail-text { font-size: 14px; color: #ffffff; line-height: 1.5; }
+
+        /* --- FOOTER (Y CHANG INDEX) --- */
+        footer { text-align: center; padding: 40px; background: #050a14; color: #555; font-size: 13px; border-top: 1px solid #1a3a6a; position: relative; z-index: 10; }
+    </style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<nav>
+    <a href="index.html" class="logo-container">
+        <img src="logo.png" alt="LTP Intel Studio Logo" class="logo-img">
+        <span class="logo-text">LTP Intel Studio</span>
+    </a>
+    <div class="nav-links">
+        <a href="index.html">Home</a> <a href="features.html" style="color: #ffffff;">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="support.html">Support</a>
+        <a href="about.html">About</a>
+        <a href="download.html" style="color: #38bdf8; font-weight: bold; padding: 8px 15px; border-radius: 4px; border: 1px solid #1a3a6a;">Download</a> </div>
+</nav>
+
+<section class="features-hero">
+    <h1>Advanced Capabilities v1.1</h1>
+    <p>Discover the engineering power behind Cloud Advice Premium. From massive infrastructure to unbreakable security, v1.1 is built for professionals.</p>
+</section>
+
+<section class="features-grid">
+    
+    <div class="feature-card">
+        <div class="feature-icon-column">
+            <span class="large-text-icon">100TB</span>
+        </div>
+        <div class="feature-content">
+            <h2>Next-Generation 100TB Infrastructure</h2>
+            <p>Cloud Advice Premium v1.1 unlocks unprecedented scaling capabilities. Our decentralized storage network ensures your vast data volumes are handled with professional speed and unmatched reliability.</p>
+            <ul class="feature-details-list">
+                <li class="detail-item"><span class="checkmark-icon">✔</span> <span class="detail-text">Ultra-Fast Data Access and Transfer</span></li>
+                <li class="detail-item"><span class="checkmark-icon">✔</span> <span class="detail-text">Massive 10 Terabyte Storage Allocation</span></li>
+                <li class="detail-item"><span class="checkmark-icon">✔</span> <span class="detail-text">Seamless Decentralized Synchronization</span></li>
+                <li class="detail-item"><span class="checkmark-icon">✔</span> <span class="detail-text">Enterprise-Grade Performance & Scalability</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon-column">
+            <span class="large-text-icon">OTP</span>
+        </div>
+        <div class="feature-content">
+            <h2>Unbreakable 6-Digit OTP Security</h2>
+            <p>Your privacy is our priority. Version 1.1 integrates a robust One-Time Password (OTP) system. Every access attempt is strictly verified, keeping your sensitive data under absolute lock and key.</p>
+            <ul class="feature-details-list">
+                <li class="detail-item"><span class="checkmark-icon">✔</span> <span class="detail-text">Integrated Dual-Layer OTP Verification</span></li>
+                <li class="detail-item"><span class="checkmark-icon">✔</span> <span class="detail-text">Fast & Reliable OTP Delivery via Secure Channels</span></li>
+                <li class="detail-item"><span class="checkmark-icon">✔</span> <span class="detail-text">Directly Linked to Personal Access Credentials</span></li>
+                <li class="detail-item"><span class="checkmark-icon">✔</span> <span class="detail-text">Protection Against Unauthorized Access Attempts</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon-column">
+            <span class="large-emoji-icon">💾</span>
+        </div>
+        <div class="feature-content">
+            <h2>Absolute Data Persistence Engine</h2>
+            <p>Data loss is a thing of the past. Our advanced persistence engine, powered by the professional `cloud_data.json` architecture, guarantees your configurations, settings, and metadata remain intact across all sessions and system environments.</p>
+            <ul class="feature-details-list">
+                <li class="detail-item"><span class="checkmark-icon">✔</span> <span class="detail-text">Advanced `cloud_data.json` Configuration</span></li>
+                <li class="detail-item"><span class="checkmark-icon">✔</span> <span class="detail-text">Automatic Session Data Saving & Restoration</span></li>
+                <li class="detail-item"><span class="checkmark-icon">✔</span> <span class="detail-text">Persistent Settings Across Environments</span></li>
+                <li class="detail-item"><span class="checkmark-icon">✔</span> <span class="detail-text">Robust Metadata and Configuration Management</span></li>
+            </ul>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2024 LTP Intel Studio. Built for Professionals. All data is encrypted offline. All rights reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    // CẤU HÌNH HIỆU ỨNG HẠT ÁNH SÁNG
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#38bdf8" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.3, "random": false },
+        "size": { "value": 3, "random": true },
+        "line_linked": { "enable": true, "distance": 150, "color": "#1a3a6a", "opacity": 0.4, "width": 1 },
+        "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false }
+      },
+      "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+        "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 1 } }, "push": { "particles_nb": 4 } }
+      },
+      "retina_detect": true
+    });
+</script>
+
+</body>
+</html>
